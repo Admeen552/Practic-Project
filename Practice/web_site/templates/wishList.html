@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css\style-web.css' %}" />
+  <title>Избранное</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="flex-header">
+        <div class="logo">
+          <a href="{% url 'index' %}">
+            <h1>GameMaster</h1>
+          </a>
+        </div>
+        <div class="block-nav-header">
+          <a href="{% url 'catalog' %}">Каталог</a>
+          <a href="{% url 'wishList' %}">Избранное</a>
+          <a href="{% url 'cart' %}">Корзина</a>
+          <a href="{% url 'aut' %}">Вход</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Корзина</h1>
+      <div class="flex-cart">
+
+        <div class="item-cart">
+          <div class="block-cart-join">
+            <div class="block-img-cart">
+              <img src="https://media.lavkaigr.ru/cache/54/05/54057d30ff0470e30173bcccdc343989.png" alt="Фото игры">
+            </div>
+            <div class="block-info-cart">
+              <p>Название</p>
+              <span>Категория</span>
+            </div>
+          </div>
+          <div class="block-quantity-price">
+            <div class="block-price-cart">
+              <p>Цена: 1500 руб</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-cart">
+          <div class="block-cart-join">
+            <div class="block-img-cart">
+              <img src="https://media.lavkaigr.ru/cache/54/05/54057d30ff0470e30173bcccdc343989.png" alt="Фото игры">
+            </div>
+            <div class="block-info-cart">
+              <p>Название</p>
+              <span>Категория</span>
+            </div>
+          </div>
+          <div class="block-quantity-price">
+            <div class="block-price-cart">
+              <p>Цена: 1500 руб</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-footer">
+      <div class="flex-footer">
+        <h2>GameMaster</h2>
+        <div class="block-footer">
+          <h2>Контакты</h2>
+          <p>Номер телефона: +79002006677</p>
+          <p>Email: aleev-ilya@mail.ru</p>
+        </div>
+        <div class="block-footer">
+          <h2>Соцсети</h2>
+          <div class="flex-img-footer">
+            <img src="{% static 'img\vk.png' %}" alt="vk" />
+            <img src="{% static 'img\tg.png' %}" alt="tg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

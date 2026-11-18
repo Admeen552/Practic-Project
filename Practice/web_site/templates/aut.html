@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css\style-web.css' %}" />
+    <title>Авторизация</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="flex-header">
+          <div class="logo">
+            <a href="{% url 'index' %}"><h1>GameMaster</h1></a>
+          </div>
+          <div class="block-nav-header">
+            <a href="{% url 'catalog' %}">Каталог</a>
+            <a href="{% url 'wishList' %}">Избранное</a>
+            <a href="{% url 'cart' %}">Корзина</a>
+            <a href="{% url 'aut' %}">Вход</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-reg-aut">
+        <div class="block-reg-aut">
+          <h1>Авторизация</h1>
+          <div class="flex-block-input">
+            <div class="block-input">
+              <input type="tel" placeholder="Введите номер телефона" />
+              <input type="password" placeholder="Введите пароль" />
+            </div>
+          </div>
+          <div class="block-link-reg-aut">
+            <a href="{% url 'reg' %}">Нет аккаунта?</a>
+          </div>
+          <div class="button-reg-aut">
+            <button><a href="{% url 'profile' %}">Войти</a></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="flex-footer">
+          <h2>GameMaster</h2>
+          <div class="block-footer">
+            <h2>Контакты</h2>
+            <p>Номер телефона: +79002006677</p>
+            <p>Email: aleev-ilya@mail.ru</p>
+          </div>
+          <div class="block-footer">
+            <h2>Соцсети</h2>
+            <div class="flex-img-footer">
+              <img src="{% static 'img\vk.png' %}" alt="vk" />
+              <img src="{% static 'img\tg.png' %}" alt="tg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
